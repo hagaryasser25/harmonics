@@ -1,0 +1,208 @@
+<div class="row h-100" style="background-color:#F7F8FA; ">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-4 ">
+                <div class="card mt-3 ms-5 h-75 w-75" >
+                    <div class="card-body ">
+                        <h5 class="card-title " style="border-bottom:  2px solid #f5f1f1;">Average Harmonic KPI's</h5>
+                        <p class="card-text " style="color: var(--unnamed-color-000000);
+                  text-align: left;
+                  letter-spacing: 0px;
+                  color: #000000; margin-top: 25px;
+                  opacity: 1;">THD Voltage</p>
+                        <div class="row">
+                            <div class="col-9 mt-2">
+                                <mat-progress-bar mode="determinate" value="21"></mat-progress-bar>
+
+                            </div>
+                            <div class="col " style="color: var(--unnamed-color-000000);
+                      text-align: center;
+                      letter-spacing: 0px;
+                      color: #000000;
+                      opacity: 1;">
+                                <p>21.12%</p>
+
+                            </div>
+
+                        </div>
+                        <p class="card-text ">THD Current</p>
+                        <div class="row">
+                            <div class="col-9 mt-2">
+                                <mat-progress-bar mode="determinate" value="42"></mat-progress-bar>
+
+                            </div>
+                            <div class="col mb-5" style="color: var(--unnamed-color-000000);
+                      text-align: center;
+                      letter-spacing: 0px;
+                      color: #000000;
+                      opacity: 1;">
+                                <p>42.97%</p>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card mt-3 ms-3 h-75 w-75"  >
+                    <div class="card-body ">
+                        <h5 class="card-title  " style="border-bottom:  2px solid #f5f1f1;">Highest Feature</h5>
+                        <p class="card-text " style="color: var(--unnamed-color-000000);
+                  text-align: left;
+                  letter-spacing: 0px;
+                  color: #000000; margin-top: 25px;
+                  opacity: 1;">DRAWING-COPPER</p>
+                        <div class="row " style="margin-top: 25px;">
+                            <div class="col-7">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <p>THD Voltage</p>
+                                    </div>
+                                    <div class="col-4">
+                                        <p>60.12%</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-5 ">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <p>THD Current</p>
+                                    </div>
+                                    <div class="col">
+                                        <p>80.12%</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-4  ">
+
+                                <mat-progress-bar class="pink" mode="determinate" value="60"></mat-progress-bar>
+
+                            </div>
+                            <div class="col-3"></div>
+                            <div class="col-4  ">
+                                <mat-progress-bar mode="determinate" value="80"></mat-progress-bar>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card mt-3 h-75 w-75 ms-3" >
+                    <div class="card-body ">
+                        <h5 class="card-title " style="border-bottom:  2px solid #f5f1f1;">Lowest Feature</h5>
+                        <p class="card-text " style="color: var(--unnamed-color-000000);
+                  text-align: left;
+                  letter-spacing: 0px;
+                  color: #000000; margin-top: 25px;
+                  opacity: 1;">EXTRUSION</p>
+                        <div class="row " style="margin-top: 25px;">
+                            <div class="col-7 ">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <p>THD Voltage</p>
+                                    </div>
+                                    <div class="col-4">
+                                        <p>05.12%</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col ">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <p>THD Current</p>
+                                    </div>
+                                    <div class="col">
+                                        <p>10.12%</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-4  ">
+
+                                <mat-progress-bar class="pink" mode="determinate" value="5"></mat-progress-bar>
+
+                            </div>
+                            <div class="col-3"></div>
+                            <div class="col-4  ">
+                                <mat-progress-bar mode="determinate" value="10"></mat-progress-bar>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row ms-5 mt-3">
+            <div class="col-7">
+                <div class="card ">
+                    <div class="card-body">
+                        <div class="row" style="border-bottom:  2px solid #b9b6b6;">
+                            <div class="col-8 mt-2">
+                                <h5 class="card-title " >THD Profile (THDi,THDv) Per Feature
+                                </h5>
+                            </div>
+                           
+
+                        </div>
+                        
+                       
+                        <div id="chart">
+                            <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart"
+                                [dataLabels]="chartOptions.dataLabels" [plotOptions]="chartOptions.plotOptions"
+                                [yaxis]="chartOptions.yaxis" [legend]="chartOptions.legend" [fill]="chartOptions.fill"
+                                [stroke]="chartOptions.stroke" [tooltip]="chartOptions.tooltip"
+                                [xaxis]="chartOptions.xaxis"></apx-chart>
+                        </div>
+
+                        
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-3 ">
+                <div class="card  h-100 w-100">
+                    <div class="card-body">
+                        <h5 class="card-title" style="border-bottom:  2px solid #b9b6b6;">Harmonics Current Orders</h5>
+                        <div id="chart " style="margin-top: 60px;">
+                            <div id="chart2">
+                                <apx-chart
+                                  [series]="chartOptions2.series"
+                                  [chart]="chartOptions2.chart"
+                                  [labels]="chartOptions2.labels"
+                                  [responsive]="chartOptions2.responsive"
+                                ></apx-chart>
+                              </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
