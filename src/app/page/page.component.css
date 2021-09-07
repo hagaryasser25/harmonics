@@ -51,3 +51,78 @@ font-weight: 500;
 {
     border: .5rem solid pink;
 }
+
+.icon-orange
+{
+    color: #F39C12;
+}
+.nav-link.or{
+    
+    text-align: left;
+    font: normal normal medium 16px/19px Montserrat;
+    letter-spacing: 0px;
+    color: #272D3B;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+.nav-link.or:hover
+{
+    color: black;
+}
+
+
+
+.nav-link.or:focus
+{
+    color: black;
+    font-weight: 580;
+    font-size: 15px;
+    border-top: 5px solid  #F39C12;
+    border-radius: 3px;
+   
+}
+
+.card-title.h5
+{
+    color: var(--unnamed-color-707070);
+text-align: left;
+font: normal normal medium 14px/18px Montserrat;
+letter-spacing: 0.28px;
+color: #707070;
+opacity: 1;
+border-bottom:  2px solid #f5f1f1;
+}
+
+p
+{
+    color: var(--unnamed-color-000000);
+text-align: left;
+letter-spacing: NaNpx;
+color: #000000;
+opacity: 1;
+}
+
+.nav-link.chart{
+    
+    text-align: left;
+    font: normal normal medium 16px/19px Montserrat;
+    letter-spacing: 0px;
+    color: #B2BEC3;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+
+
+
+
+.nav-link.chart:focus
+{
+    color: #F39C12;
+    border-bottom: 2px solid #F39C12;
+    
+    
+   
+}
+

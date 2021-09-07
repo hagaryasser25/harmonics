@@ -1,2 +1,54 @@
-<app-harmonics></app-harmonics>
-<app-page></app-page>
+<mat-drawer-container class="example-container">
+    <mat-drawer style="background-color:#F39C12 ; border-color: transparent; width: 80px;" mode="side" opened>
+        <div class="col mt-4 ms-4">
+            <span class="material-icons" style="color:#FFFFFF; font-size: 30px;">
+                wb_incandescent
+            </span>
+        </div>
+        <div class="col ms-4  " style="margin-top: 90px;">
+            <span style="font-size: 30px; color:#FFFFFF99 " class="material-icons">
+                grid_view
+            </span>
+        </div>
+        <div class="col ms-4 mt-4">
+            <span style="font-size: 30px; color:#FFFFFF99 " class="material-icons">
+                filter_center_focus
+            </span>
+        </div>
+        <div class="col ms-4 mt-4">
+            <i style="font-size: 30px; color:#FFFFFF99" class="fa fa-columns"></i>
+        </div>
+        <div class="col-5 mt-4 " style="margin-left: 20px;">
+            <mat-divider  ></mat-divider>
+        </div>
+        <div class="col ms-4 mt-4">
+            <span style="font-size: 27px; color:#FFFFFF99 " class="material-icons">
+                wifi_tethering
+                </span>
+        </div>
+        <div class="col ms-4 mt-4">
+            <span style="font-size: 27px; color:#FFFFFF99 " class="material-icons">
+                warning_amber
+                </span>
+        </div>
+        <br> <br> <br> 
+        <div class="col ms-4 " style="margin-top: 280px;">
+            <span style="font-size: 27px; color:#FFFFFF99 " class="material-icons">
+                settings
+                </span>       
+        </div>
+        <div class="col ms-4 mt-4">
+            <span style="font-size: 27px; color:#FFFFFF99 " class="material-icons">
+                logout
+                </span>
+        </div>
+
+    </mat-drawer>
+    <mat-drawer-content>
+
+        <app-page></app-page>
+        <div style="height: 18px; background-color: #F7F8FA;">
+
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>
