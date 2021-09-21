@@ -3,20 +3,19 @@
         <a (click)="clicked('1')" class="nav-link or col-10" style="text-align: center;" aria-current="page"
             href="#">ENERGY CONSUMPTION</a>
     </li>
+    <div class="col-1"></div>
 
-    <li class="nav-item mt-3 col-2 ms-5">
+    <li class="nav-item mt-3 col-2 ">
         <a (click)="clicked('2')" class="nav-link or col-8" style="text-align: center;" href="#">ACTIVE POWER</a>
     </li>
-    <li class="nav-item mt-3 col-2 ms-5">
+    <div class="col-1"></div>
+    <li class="nav-item mt-3 col-2 ">
         <a (click)="clicked('3')" class="nav-link or col-8" style="text-align: center;" href="#">POWER FACTOR</a>
     </li>
+    <div class="col-1"></div>
 
-    <li class="nav-item mt-3 col-2 ms-5">
+    <li class="nav-item mt-3 col-2 ">
         <a (click)="clicked('4')" class="nav-link or  col-8" style="text-align: center;" href="#">HARMONICS</a>
-    </li>
-
-    <li class="nav-item mt-3  ms-5 col-xl-5 col-xxl-2">
-        <a (click)="clicked('5')" class="nav-link or col-8" style="text-align: center;" href="#">SAGSWELL</a>
     </li>
 </ul>
 <nav class="navbar navbar-light ">
@@ -869,26 +868,328 @@
                     </div>
                 </div>
             </div>
+            <div class="col-1"></div>
             <div class="col-3">
-                <div class="card" >
+                <div class="card">
                     <div class="card-body">
-                      <h5 class="card-title h5">Highest Feature</h5>
-                      <div class="row">
-                          <div class="col">
+                        <h5 class="card-title h5">Highest Feature</h5>
+                        <div class="row ">
+                            <div class="col-4 mt-3">
+                                <circle-progress [percent]="76" [radius]="35" [outerStrokeWidth]="10"
+                                    [innerStrokeWidth]="0" [outerStrokeColor]="'#FF2366'" [innerStrokeColor]="'#FF2366'"
+                                    [animation]="true" [animationDuration]="300"></circle-progress>
+                            </div>
+                            <div class="col" style="margin-top: 40px;">
+                                <p style="color: var(--unnamed-color-000000);
+                                text-align: left;
+                                letter-spacing: 0px;
+                                color: #000000;
+                                text-transform: uppercase;
+                                opacity: 1;">Drawing-Copper</p>
+                                <P style="color: var(--unnamed-color-000000);
+                                text-align: left;
+                                letter-spacing: 0px;
+                                color: #000000;
+                                text-transform: uppercase;
+                                opacity: 1;" style="color: var(--unnamed-color-000000);
+                                text-align: left;
+                                letter-spacing: 0px;
+                                color: #000000;
+                                text-transform: uppercase;
+                                opacity: 1;">0.66</P>
 
-                          </div>
-                          <div class="col">
+                            </div>
 
-                          </div>
+                        </div>
 
-                      </div>
-
+                        <div class="col" style="height: 15px;"></div>
                     </div>
-                  </div>
+
+                </div>
 
             </div>
-            <div class="col">
+            <div class="col-1"></div>
+            <div class="col-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title h5">Lowest Feature</h5>
+                        <div class="row ">
+                            <div class="col-4 mt-3">
+                                <circle-progress [percent]="45" [radius]="35" [outerStrokeWidth]="10"
+                                    [innerStrokeWidth]="0" [outerStrokeColor]="'#00CCF2'" [innerStrokeColor]="'#00CCF2'"
+                                    [animation]="true" [animationDuration]="300"></circle-progress>
+                            </div>
+                            <div class="col" style="margin-top: 40px;">
+                                <p style="color: var(--unnamed-color-000000);
+                                text-align: left;
+                                letter-spacing: 0px;
+                                color: #000000;
+                                text-transform: uppercase;
+                                opacity: 1;">Drawing-Copper</p>
+                                <P style="color: var(--unnamed-color-000000);
+                                text-align: left;
+                                letter-spacing: 0px;
+                                color: #000000;
+                                text-transform: uppercase;
+                                opacity: 1;" style="color: var(--unnamed-color-000000);
+                                text-align: left;
+                                letter-spacing: 0px;
+                                color: #000000;
+                                text-transform: uppercase;
+                                opacity: 1;">0.66</P>
 
+                            </div>
+
+                        </div>
+
+                        <div class="col" style="height: 15px;"></div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="row mt-5">
+            <div class="col-7 ms-5">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row" style="border-bottom:  2px solid #b9b6b6;">
+                            <div class="col-5 mt-2">
+                                <h5>Power Factor Distribution Per Feature</h5>
+                            </div>
+                            <div class="col-2">
+                                <h5><a (click)="clicked2('1')" class="nav-link chart col-8" style="text-align: center; "
+                                        href="#"> Bar Chart</a>
+                                </h5>
+                            </div>
+                            <div class="col-2">
+                                <h5><a (click)="clicked2('3')" class="nav-link chart col-8" style="text-align: center; "
+                                        href="#"> Line Chart</a>
+                                </h5>
+                            </div>
+                            <div class="col-3">
+                                <h5><a (click)="clicked2('2')" class="nav-link chart col-8" style="text-align: center; "
+                                        href="#">
+                                        Record List</a>
+                                </h5>
+                            </div>
+                        </div>
+                        <div *ngIf="selectedTab2=='line chart'" class="col" id="chart9">
+                            <apx-chart [series]="chartOptions9.series" [chart]="chartOptions9.chart"
+                                [xaxis]="chartOptions9.xaxis" [dataLabels]="chartOptions9.dataLabels"
+                                [grid]="chartOptions9.grid" [stroke]="chartOptions9.stroke" [title]="chartOptions.title">
+                            </apx-chart>
+
+                        </div>
+                        <div *ngIf="selectedTab2=='bar chart'" class="col  mt-2 w-100" id="chart6">
+                            <apx-chart [series]="chartOptions6.series" [chart]="chartOptions6.chart"
+                                [dataLabels]="chartOptions6.dataLabels" [plotOptions]="chartOptions6.plotOptions"
+                                [yaxis]="chartOptions6.yaxis" [xaxis]="chartOptions6.xaxis"
+                                [legend]="chartOptions6.legend" [colors]="chartOptions6.colors"
+                                [grid]="chartOptions6.grid"></apx-chart>
+                        </div>
+                        <div *ngIf="selectedTab2=='record list'" class="col mt-3">
+                            <table class="table">
+                                <thead>
+                                    <tr style="color: var(--unnamed-color-707070);
+                                  text-align: left;
+                                  font:  12px/14px Montserrat;
+                                  letter-spacing: 0.24px;
+                                  color: #707070;
+                                  text-transform: uppercase;
+                                  opacity: 1; ">
+                                        <th scope="col">NAME</th>
+                                        <th scope="col">STATE</th>
+                                        <th scope="col">average (KWH)</th>
+                                        <th scope="col">20 Jan</th>
+                                        <th scope="col">21 Jan</th>
+                                        <th scope="col">22 Jan</th>
+                                        <th scope="col">23 Jan</th>
+                                        <th scope="col">24 Jan</th>
+                                        <th scope="col">25 Jan</th>
+                                        <th scope="col">26 Jan</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="color: var(--unnamed-color-707070);
+                                  text-align: left;
+                                  font: normal normal medium 12px/15px Montserrat;
+                                  letter-spacing: 0.24px;
+                                  color: #707070;
+                                  opacity: 1;">
+                                        <td>Load Name</td>
+                                        <td>online</td>
+                                        <td>1000</td>
+                                        <td>100</td>
+                                        <td>100</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td>50</td>
+                                        <td>50</td>
+                                        <td>50</td>
+
+                                    </tr>
+                                    <tr style="color: var(--unnamed-color-707070);
+                                  text-align: left;
+                                  font: normal normal medium 12px/15px Montserrat;
+                                  letter-spacing: 0.24px;
+                                  color: #707070;
+                                  opacity: 1;">
+                                        <td>Load Name</td>
+                                        <td>online</td>
+                                        <td>1000</td>
+                                        <td>100</td>
+                                        <td>100</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td>50</td>
+                                        <td>50</td>
+                                        <td>50</td>
+                                    </tr>
+                                    <tr style="color: var(--unnamed-color-707070);
+                                  text-align: left;
+                                  font: normal normal medium 12px/15px Montserrat;
+                                  letter-spacing: 0.24px;
+                                  color: #707070;
+                                  opacity: 1;">
+                                        <td>Load Name</td>
+                                        <td>online</td>
+                                        <td>1000</td>
+                                        <td>100</td>
+                                        <td>100</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td>50</td>
+                                        <td>50</td>
+                                        <td>50</td>
+                                    </tr>
+                                    <tr style="color: var(--unnamed-color-707070);
+                                  text-align: left;
+                                  font: normal normal medium 12px/15px Montserrat;
+                                  letter-spacing: 0.24px;
+                                  color: #707070;
+                                  opacity: 1;">
+                                        <td>Load Name</td>
+                                        <td>online</td>
+                                        <td>1000</td>
+                                        <td>100</td>
+                                        <td>100</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td>50</td>
+                                        <td>50</td>
+                                        <td>50</td>
+                                    </tr>
+                                    <tr style="color: var(--unnamed-color-707070);
+                                  text-align: left;
+                                  font: normal normal medium 12px/15px Montserrat;
+                                  letter-spacing: 0.24px;
+                                  color: #707070;
+                                  opacity: 1;">
+                                        <td>Load Name</td>
+                                        <td>online</td>
+                                        <td>1000</td>
+                                        <td>100</td>
+                                        <td>100</td>
+                                        <td>200</td>
+                                        <td>200</td>
+                                        <td>50</td>
+                                        <td>50</td>
+                                        <td>50</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                            <br> <br> <br> <br>
+                            <div>
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col " style="height: 80px;"></div>
+
+            </div>
+            <div class="col-1"></div>
+            <div class="col-3">
+                <diV class="col ">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title h5">Card title</h5>
+                            <div class="col mt-5">
+                                <apx-chart [series]="chartOptions7.series" [chart]="chartOptions7.chart"
+                                    [labels]="chartOptions7.labels" [responsive]="chartOptions7.responsive"></apx-chart>
+                            </div>
+                            <div class="col mt-4">
+                                <div class="row ms-3">
+                                    <div class="col-1">
+                                        <span style="font-size: 20px; margin-left: 15px; color: #FF2366;"
+                                            class="material-icons-outlined">
+                                            expand_less
+                                        </span>
+                                    </div>
+                                    <div class="col-6 mt-1" style="color: var(--tertiary);
+                              text-align: left;
+                              font: normal normal normal 10px/12px Montserrat;
+                              letter-spacing: 0.2px;
+                              color: #FF2366;
+                              text-transform: uppercase;
+                              opacity: 1;">
+                                        HIGHEST
+    
+                                    </div>
+                                    <div class="col-1">
+                                        <span style="font-size: 20px; margin-left: 15px; color: #00CCF2;"
+                                            class="material-icons-outlined">
+                                            expand_more
+                                        </span>
+                                    </div>
+                                    <div class="col mt-1" style="color: var(--tertiary);
+                              text-align: left;
+                              font: normal normal normal 10px/12px Montserrat;
+                              letter-spacing: 0.2px;
+                              color: #00CCF2;
+                              text-transform: uppercase;
+                              opacity: 1;">
+                                        LOWEST
+    
+                                    </div>
+                                </div>
+                                <div class="row ">
+                                    <div class="col-7">
+                                        <p style="color: var(--unnamed-color-272d3b);
+                                    text-align: left;
+                                    letter-spacing: NaNpx;
+                                    color: #272D3B;
+                                    text-transform: uppercase;
+                                    opacity: 1; margin-left: 46px;">
+                                            1000 kWH
+                                        </p>
+                                    </div>
+                                    <div class="col " style="margin-left: 12px;">
+                                        <p style="color: var(--unnamed-color-272d3b);
+                                    text-align: left;
+                                    letter-spacing: NaNpx;
+                                    color: #272D3B;
+                                    text-transform: uppercase;
+                                    opacity: 1; margin-left: 20px;">
+                                            100 kWH
+                                        </p>
+                                    </div>
+    
+                                </div>
+    
+    
+                            </div>
+                           
+                        </div>
+                    </div>
+    
+                </diV>
             </div>
 
         </div>

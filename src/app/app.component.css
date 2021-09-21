@@ -2,3 +2,12 @@
 {
     border-top-color: #FFFFFF99;
 }
+span:hover
+{
+    cursor: pointer;
+}
+
+i:hover
+{
+    cursor: pointer;
+}

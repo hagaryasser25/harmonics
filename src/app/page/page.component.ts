@@ -56,7 +56,7 @@ export type ChartOptions = {
 })
 export class PageComponent  {
 
-
+ 
 
   
 
@@ -76,6 +76,8 @@ export class PageComponent  {
  chart7!: ChartComponent;
  @ViewChild("chart8")
  chart8!: ChartComponent;
+ @ViewChild("chart9")
+ chart9!: ChartComponent;
   public chartOptions: Partial<ChartOptions>;
   public chartOptions2!: Partial<ChartOptions>;
   public chartOptions3!: Partial<ChartOptions>;
@@ -84,6 +86,8 @@ export class PageComponent  {
   public chartOptions6!: Partial<ChartOptions>;
   public chartOptions7!: Partial<ChartOptions>;
   public chartOptions8!: Partial<ChartOptions>;
+  public chartOptions9!: Partial<ChartOptions>;
+
 
 
   selectedTab: string = "energy consumption";
@@ -115,7 +119,14 @@ export class PageComponent  {
      if (s2 == '2') {
       this.selectedTab2 = "record list"
      }
+
+     if (s2 == '3') {
+      this.selectedTab2 = "line chart"
+
+     }
   }
+
+  
 
   public options: any = {
     chart: {
@@ -558,6 +569,59 @@ export class PageComponent  {
       },
       fill: {
         opacity: 1
+      }
+    };
+
+    this.chartOptions9 = {
+      series: [
+        {
+          name: "Feature 03",
+          data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
+        },
+        {
+          name: "",
+          data: [12, 50, 20, 51, 49, 70, 50, 91, 120]
+        },
+        {
+          name: "",
+          data: [50, 20, 10, 10, 80, 62, 69, 150, 70]
+        }
+      ],
+      chart: {
+        height: 350,
+        type: "line",
+        zoom: {
+          enabled: false
+        }
+      },
+      dataLabels: {
+        enabled: false
+      },
+      stroke: {
+        curve: "straight"
+      },
+      title: {
+        text: "Product Trends by Month",
+        align: "left"
+      },
+      grid: {
+        row: {
+          colors: ["#f3f3f3", "transparent"], // takes an array which will be repeated on columns
+          opacity: 0.5
+        }
+      },
+      xaxis: {
+        categories: [
+          "20 Jan",
+          "21 Jan",
+          "22 Jan",
+          "23 Jan",
+          "24 Jan",
+          "25 Jan",
+          "26 Jan",
+          "27 Jan",
+          "28 Jan"
+        ]
       }
     };
     

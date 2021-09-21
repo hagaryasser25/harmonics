@@ -19,12 +19,24 @@ import 'hammerjs';
 import { SparklineModule } from '@progress/kendo-angular-charts';
 import { HighchartsChartModule } from 'highcharts-angular';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import { ReportsComponent } from './reports/reports.component';
+import {MatTreeModule} from '@angular/material/tree';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatInputModule } from '@angular/material/input';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { StatusComponent } from './status/status.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageComponent
+    PageComponent,
+    ReportsComponent,
+    StatusComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,9 +52,19 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatSidenavModule,
     MatDividerModule,
     SparklineModule,
+    MatTreeModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatSlideToggleModule,
+    MatInputModule,
 	ChartsModule,
   HighchartsChartModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  NgCircleProgressModule.forRoot({
+    "units": "%",
+    "outerStrokeLinecap": "butt"
+  })
 
   ],
   providers: [],

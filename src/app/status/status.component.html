@@ -1,0 +1,290 @@
+<div class="row " style=" background-color: #F7F8FA;">
+    <div class="row  ms-2">
+        <div class="row  " style="background-color: #FFFFFF; background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 6px #272D3B33;
+        opacity: 1;">
+            <div class="col-2  ms-4 ">
+                <div class="row mt-1 mb-1 w-75 pointer" style="background-color: #F39C124D; background: var(--unnamed-color-f39c124d) 0% 0% no-repeat padding-box;
+                    background: #F39C124D 0% 0% no-repeat padding-box;
+                    border-radius: 8px;
+                    opacity: 1;">
+                    <div class="col-1 mt-2">
+                        <i style="color: #F39C12; font-size: 23px;" class="fa fa-building"></i>
+                    </div>
+                    <div class="col-7" style="margin-top: 11px;">
+                        <P style="color: var(--primary);
+                            text-align: left;
+                            font: normal normal 600 16px/19px ;
+                            letter-spacing: 0px;
+                            color: #F39C12;
+                            opacity: 1;">Factory Name</P>
+                    </div>
+                    <div class="col-1 " style="margin-top: 8px;">
+                        <span style="color:#F39C12 ;" class="material-icons-outlined">
+                            expand_more
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-2">
+                <div class="row w-75 mt-1 mb-1 pointer" style="background-color: #F39C124D; background: var(--unnamed-color-f39c124d) 0% 0% no-repeat padding-box;
+                    background: #F39C124D 0% 0% no-repeat padding-box;
+                    border-radius: 8px;
+                    opacity: 1;">
+                    <div class="col-1 mt-2">
+                        <span style="color: #F39C12; font-size: 23px;"
+                            class="material-icons-outlined">settings_input_composite</span>
+                    </div>
+                    <div class="col-7 ms-1" style="margin-top: 11px;">
+                        <P style="color: var(--primary);
+                            text-align: left;
+                            font: normal normal 600 16px/19px ;
+                            letter-spacing: 0px;
+                            color: #F39C12;
+                            opacity: 1;">Feature Name</P>
+                    </div>
+                    <div class="col-1 " style="margin-top: 8px;">
+                        <span style="color:#F39C12 ;" class="material-icons-outlined">
+                            expand_more
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-5"></div>
+
+            <div class="col-1 ">
+                <div (click)="clicked('1')" [style.background-color]="selectedTab=='single layout'?'#F39C124D':'#FFFFFF'"
+                class="row mt-1 mb-1 pointer" style=" background: var(--unnamed-color-f39c124d) 0% 0% no-repeat padding-box;
+                    background: #F39C124D 0% 0% no-repeat padding-box;
+                    border-radius: 8px;
+                    opacity: 1;">
+                    <div  class="col-1 mt-2">
+                        <span style="color: #F39C12; font-size: 23px;"
+                            class="material-icons-outlined">crop_square</span>
+                    </div>
+                    <div   class="col-9 ms-1" style="margin-top: 11px;">
+                        <P style="color: var(--primary);
+                            text-align: left;
+                            font: normal normal 600 16px/19px ;
+                            letter-spacing: 0px;
+                            color: #F39C12;
+                            opacity: 1;">Single Layout</P>
+                    </div>
+
+                </div>
+
+            </div>
+            <div (click)="clicked('2')" [style.background-color]="selectedTab=='split layout'?'#F39C124D':'#FFFFFF'" class="col-1 ms-3" style="border-radius: 8px; opacity: 1;">
+                <div class="row mt-1 mb-1 pointer" style="background-color: transparent; background: var(--unnamed-color-f39c124d) 0% 0% no-repeat padding-box;
+                    background: transparent 0% 0% no-repeat padding-box;
+                    
+                    opacity: 1;">
+                    <div class="col-1 mt-2">
+                        <i style="color: #B2BEC3; font-size: 23px;" class="fa fa-columns"></i>
+                    </div>
+                    <div  class="col-9 ms-1" style="margin-top: 11px;">
+                        <P style="color: var(--primary);
+                            text-align: left;
+                            font: normal normal 600 16px/19px ;
+                            letter-spacing: 0px;
+                            color: #B2BEC3;
+                            opacity: 1;">Split Layout</P>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="row" style="height: 100px;"></div>
+    <div class="col-1"></div>
+    <div class="col-9 ms-5" *ngIf="selectedTab=='single layout'">
+        <div class="card" style="border-color: transparent;background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 8px 12px #0000001A;
+        opacity: 1; border-radius: 8px;">
+            <div class="card-body">
+                <h5 class="card-title ms-3" style="border-bottom:  1px solid #d8d4d4; ">
+                    <div class="col-3">
+                        <div class="row">
+                            <div class="col-1">
+                                <i style="color: #B2BEC3; font-size: 22px;" class="fa fa-rocket"></i>
+                            </div>
+                            <div class="col">
+                                <P style="color: var(--unnamed-color-707070);
+                            text-align: left;
+                            font: normal normal medium 14px/18px ;
+                            letter-spacing: 0.28px;
+                            color: #707070;
+                            opacity: 1;">Loads</P>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </h5>
+                <div class="col"  *ngFor="let i of Arr(num).fill(1) ">
+                    <div class="row col-11 ms-4 mt-4" style="background-color: #F7F8FA; border-radius: 8px;">
+                        <div class="row col-5">
+                            <div class="col-1 mt-3 ms-1 mb-2">
+                                <span style="color: #F39C12;" class="material-icons-outlined">
+                                    show_chart
+                                </span>
+                            </div>
+                            <div class="col mt-3" style="color: var(--unnamed-color-707070);
+                          text-align: left;
+                          font: normal normal normal 15px/25px ;
+                          letter-spacing: 0px;
+                          color: #707070;
+                          opacity: 1;">
+                                <p>Load Name00</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row col-11 ms-4 mt-3" style="background-color: #F7F8FA; border-radius: 8px;">
+                        <div class="row col-5">
+                            <div class="col-1 mt-3 ms-1 mb-2">
+                                <span style="color: #F39C12;" class="material-icons-outlined">
+                                    show_chart
+                                </span>
+                            </div>
+                            <div class="col mt-3" style="color: var(--unnamed-color-707070);
+                          text-align: left;
+                          font: normal normal normal 15px/25px ;
+                          letter-spacing: 0px;
+                          color: #707070;
+                          opacity: 1;">
+                                <p>Load Name00</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row col-11 ms-4 mt-3" style="background-color: #F7F8FA; border-radius: 8px;">
+                        <div class="row col-5">
+                            <div class="col-1  ms-1 mb-2" style="margin-top: 13px;">
+                                <span style="color: #B2BEC3;" class="material-icons-outlined">
+                                    remove
+                                </span>
+                            </div>
+                            <div class="col mt-3" style="color: var(--unnamed-color-707070);
+                          text-align: left;
+                          font: normal normal normal 15px/25px ;
+                          letter-spacing: 0px;
+                          color: #707070;
+                          opacity: 1;">
+                                <p>Load Name00</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="row " *ngIf="selectedTab=='split layout'" style="margin-left: 80px;">
+        <div class="col-5">
+            <div class="card load" >
+                <div class="card-body">
+                    <h5 class="card-title ms-3" style="border-bottom:  1px solid #d8d4d4; ">
+                        <div class="col-3">
+                            <div class="row">
+                                <div class="col-1">
+                                    <span class="material-icons-outlined" style="color: #F39C12;">
+                                        show_chart
+                                        </span>                                </div>
+                                <div class="col">
+                                    <P style="color: var(--unnamed-color-707070);
+                                text-align: left;
+                                font: normal normal medium 14px/18px ;
+                                letter-spacing: 0.28px;
+                                color: #707070; margin-top: 2px;
+                                opacity: 1;">Online Loads</P>
+    
+                                </div>
+    
+                            </div>
+                        </div>
+    
+                    </h5>   
+                    <div *ngFor="let i of Arr(num2).fill(1) " class="row col-11 ms-4 mt-4" style="background-color: #F7F8FA; border-radius: 8px;">
+                        <div class="row col-5">
+                            <div class="col-1 mt-3 ms-1 mb-2">
+                                <span style="color: #F39C12;" class="material-icons-outlined">
+                                    show_chart
+                                </span>
+                            </div>
+                            <div class="col mt-3" style="color: var(--unnamed-color-707070);
+                          text-align: left;
+                          font: normal normal normal 15px/25px ;
+                          letter-spacing: 0px;
+                          color: #707070;
+                          opacity: 1;">
+                                <p>Load Name00</p>
+
+                            </div>
+                        </div>
+                    </div>               
+                </div>
+              </div>
+        </div>
+        <div class="col-5 " style="margin-left: 100px;">
+            <div class="card load" >
+                <div class="card-body">
+                    <h5 class="card-title ms-3" style="border-bottom:  1px solid #d8d4d4; ">
+                        <div class="col-3">
+                            <div class="row">
+                                <div class="col-1">
+                                    <span class="material-icons-outlined" style="color: #B2BEC3;">
+                                        remove
+                                        </span>
+                                </div>
+                                <div class="col">
+                                    <P style="color: var(--unnamed-color-707070);
+                                text-align: left;
+                                font: normal normal medium 14px/18px ;
+                                letter-spacing: 0.28px;
+                                color: #707070; margin-top: 2px;
+                                opacity: 1;">Offline Loads</P>
+    
+                                </div>
+    
+                            </div>
+                        </div>
+                    </h5>
+                    <div *ngFor="let i of Arr(num2).fill(1) " class="row col-11 ms-4 mt-4" style="background-color: #F7F8FA; border-radius: 8px;">
+                        <div class="row col-5">
+                            <div class="col-1 mt-3 ms-1 mb-2">
+                                <span style="color: #B2BEC3" class="material-icons-outlined">
+                                    remove
+                                </span>
+                            </div>
+                            <div class="col mt-3" style="color: var(--unnamed-color-707070);
+                          text-align: left;
+                          font: normal normal normal 15px/25px ;
+                          letter-spacing: 0px;
+                          color: #707070;
+                          opacity: 1;">
+                                <p>Load Name00</p>
+
+                            </div>
+                        </div>
+                    </div>                  
+                </div>
+              </div>
+        </div>
+        <div style="height: 97px;"></div>
+
+    </div>
+    <div style="height: 40px;"></div>
+
+
+</div>

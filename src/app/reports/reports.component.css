@@ -1,0 +1,92 @@
+.hover:hover
+{
+    cursor: pointer;
+}
+
+.nav-link.or{
+    
+    text-align: left;
+    font: normal normal medium 16px/19px Montserrat;
+    letter-spacing: 0px;
+    color: #272D3B;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+.nav-link.or:hover
+{
+    color: black;
+}
+
+
+
+.nav-link.or:focus
+{
+    color: black;
+    font-weight: 580;
+    font-size: 15px;
+    border-top: 5px solid  #F39C12;
+    border-radius: 3px;
+   
+}
+
+.example-tree-invisible {
+    display: none;
+  }
+  
+  .example-tree ul,
+  .example-tree li {
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+  }
+  
+  /*
+   * This padding sets alignment of the nested nodes.
+   */
+  .example-tree .mat-nested-tree-node div[role=group] {
+    padding-left: 40px;
+  }
+  
+  /*
+   * Padding for leaf nodes.
+   * Leaf nodes need to have padding so as to align with other non-leaf nodes
+   * under the same parent.
+   */
+  .example-tree div[role=group] > .mat-tree-node {
+    padding-left: 40px;
+  }
+
+  .nav-link.chart{
+    
+    text-align: left;
+    font: normal normal medium 16px/19px Montserrat;
+    letter-spacing: 0px;
+    color: #B2BEC3;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+
+
+
+
+.nav-link.chart:focus
+{
+    color: #F39C12;
+    border-bottom: 2px solid #F39C12;
+    
+    
+   
+}
+
+.bb
+{
+  border-color: transparent;
+  background-color: #00000029;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 8px;
+  opacity: 1;
+  color: #F39C12;
+}
+

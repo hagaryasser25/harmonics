@@ -6,7 +6,7 @@
             </span>
         </div>
         <div class="col ms-4  " style="margin-top: 90px;">
-            <span style="font-size: 30px; color:#FFFFFF99 " class="material-icons">
+            <span routerLink="page" style="font-size: 30px; color:#FFFFFF99 " class="material-icons">
                 grid_view
             </span>
         </div>
@@ -18,11 +18,19 @@
         <div class="col ms-4 mt-4">
             <i style="font-size: 30px; color:#FFFFFF99" class="fa fa-columns"></i>
         </div>
-        <div class="col-5 mt-4 " style="margin-left: 20px;">
+        <div class="col ms-4 mt-4">
+            <i style="font-size: 30px; color:#FFFFFF99" class="fa fa-rocket"></i>
+        </div>
+        <div class="col ms-4 mt-4">
+            <span routerLink="reports" style=" font-size: 30px; color:#FFFFFF99" class="material-icons-outlined">
+                description
+                </span>
+        </div>
+        <div class="col-5 mt-4 " style="margin-left: 20px; ">
             <mat-divider  ></mat-divider>
         </div>
         <div class="col ms-4 mt-4">
-            <span style="font-size: 27px; color:#FFFFFF99 " class="material-icons">
+            <span routerLink="status" style="font-size: 27px; color:#FFFFFF99 " class="material-icons">
                 wifi_tethering
                 </span>
         </div>
@@ -31,8 +39,8 @@
                 warning_amber
                 </span>
         </div>
-        <br> <br> <br> 
-        <div class="col ms-4 " style="margin-top: 280px;">
+        
+        <div class="col ms-4 " style="margin-top: 200px;">
             <span style="font-size: 27px; color:#FFFFFF99 " class="material-icons">
                 settings
                 </span>       
@@ -45,8 +53,8 @@
 
     </mat-drawer>
     <mat-drawer-content>
+        <router-outlet></router-outlet>
 
-        <app-page></app-page>
         <div style="height: 18px; background-color: #F7F8FA;">
 
         </div>

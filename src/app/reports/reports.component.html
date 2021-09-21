@@ -1,0 +1,562 @@
+<mat-drawer-container style="height: 960px; " class="example-container">
+    <mat-drawer class="col-2" mode="side" opened>
+        <div class="row  " style="background-color: #F39C124D;">
+            <div class="col-2 mt-4 ms-3">
+                <i style="font-size: 20px; color: #F39C12;" class="fa fa-building"></i>
+            </div>
+            <div class="col-7 mt-4">
+                <p style="color: var(--primary);
+                    text-align: left;
+                    font: normal normal normal 600 16px/19px Montserrat;
+                    letter-spacing: 0px;
+                    color: #F39C12;
+                    opacity: 1;">All Factories</p>
+            </div>
+            <div class="col " style="margin-top: 23px;">
+                <span style="color:#F39C12 ;" class="material-icons-outlined">
+                    expand_more
+                </span>
+            </div>
+            <br> <br> <br>
+
+        </div>
+        <div class="col-8 mt-5 ms-5">
+            <div class="row " style="background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                box-shadow: 1px 2px 6px #0000001C;
+                border-radius: 8px;
+                opacity: 1;">
+                <div class="col-3 col-xl-7 col-xxl-3 col-lg-9 ">
+                    <button style="color: #4C788D;" mat-button>Area</button>
+                </div>
+                <div class="col-3 col-xl-7 col-xxl-3 col-lg-9 ">
+                    <button style="background-color: #F39C12; color: #FFFFFF; border-radius: 8px; box-shadow: 1px 2px 6px #0000001A;
+                        " mat-button>Function</button>
+                </div>
+                <div class="col-3 ms-4 col-xl-7 col-xxl-3 col-lg-9 ">
+                    <button style="color: #4C788D;" mat-button>Route</button>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div class="col mt-5 ms-1">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-9  ms-1">
+                    <div class="row" *ngIf="level == 0" (click)="level = 1;clicked('1')">
+                        <div class="col-3">
+                            <i style="color: #F39C12; font-size: 12px;" class="fa fa-circle"></i>
+                            <img style="margin-left: 2px;"
+                                src="../../assets/img/urn_aaid_sc_US_c676ec87-2689-4930-a4a7-40f1f6953a0a (1).png">
+                        </div>
+                        <div class="col mt-1">
+                            <p class="hover" style="color: var(--unnamed-color-707070);
+                                text-align: left;
+                                font: normal normal normal 13px/25px;
+                                letter-spacing: 0px;
+                                color: #707070;
+                                opacity: 1">Factory Name</p>
+
+                        </div>
+
+                    </div>
+                    <div class="row" *ngIf="level == 1 || level == 2" (click)="level = 0;clicked('0')">
+                        <div class="col-3">
+                            <i style="color: #F39C12; font-size: 12px;" class="fa fa-circle"></i>
+                            <img style="margin-left: 2px;"
+                                src="../../assets/img/urn_aaid_sc_US_c676ec87-2689-4930-a4a7-40f1f6953a0a (1).png">
+                        </div>
+                        <div class="col mt-1">
+                            <p class="hover" style="color: var(--unnamed-color-707070);
+                                text-align: left;
+                                font: normal normal normal 13px/25px;
+                                letter-spacing: 0px;
+                                color: #707070;
+                                opacity: 1">Factory Name</p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="row" *ngIf="selectedTab=='function' && level == 1" (click)="level = 2;clicked('2')">
+
+                <div class="col-1"></div>
+                <div class="col-9  ms-4">
+                    <div class="row">
+                        <div class="col-3 ">
+                            <i style="color: #F39C12; font-size: 12px;" class="fa fa-circle"></i>
+                            <img style="margin-left: 2px; margin-top: 2px;" src="../../assets/img/2.png">
+                        </div>
+                        <div class="col mt-1">
+                            <p class="hover" style="color: var(--unnamed-color-707070);
+                                text-align: left;
+                                font: normal normal normal 13px/25px;
+                                letter-spacing: 0px;
+                                color: #707070;
+                                opacity: 1">Function Name</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row" >
+
+                <div class="col-1"></div>
+                <div class="col-9  ms-4">
+                    <div class="row">
+                        <div class="col-3 ">
+                            <i style="color: #F39C12; font-size: 12px;" class="fa fa-circle"></i>
+                            <img style="margin-left: 2px; margin-top: 2px;" src="../../assets/img/2.png">
+                        </div>
+                        <div class="col mt-1">
+                            <p class="hover" style="color: var(--unnamed-color-707070);
+                                text-align: left;
+                                font: normal normal normal 13px/25px;
+                                letter-spacing: 0px;
+                                color: #707070;
+                                opacity: 1">Function Name</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div class="row" *ngIf="selectedTab=='load' && level == 2" (click)="level = 1;clicked('1')">
+                <div class="row">
+
+                    <div class="col-1"></div>
+                    <div class="col-10  ms-4">
+                        <div class="row">
+                            <div class="col-3 ">
+                                <i style="color: #F39C12; font-size: 12px;" class="fa fa-circle"></i>
+                                <img style="margin-left: 2px;" src="../../assets/img/2.png">
+                            </div>
+                            <div class="col mt-1">
+                                <p class="hover" style="color: var(--unnamed-color-707070);
+                                    text-align: left;
+                                    font: normal normal normal 13px/25px;
+                                    letter-spacing: 0px;
+                                    color: #707070;
+                                    opacity: 1">Function Name</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-9  " style="margin-left: 40px;">
+                    <div class="row" *ngFor="let i of Arr(num).fill(1) ">
+                        <div class="col-3 ">
+                            <i style="color: #F39C124C; font-size: 12px;" class="fa fa-circle"></i>
+                            <img style="margin-left: 2px; margin-top: 2px;" src="../../assets/img/3.png">
+                        </div>
+                        <div class="col mt-1">
+                            <p style="color: var(--unnamed-color-707070);
+                                text-align: left;
+                                font: normal normal normal 13px/25px;
+                                letter-spacing: 0px;
+                                color: #707070;
+                                opacity: 1">Load Name</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="row" *ngFor="let i of Arr(num2).fill(1)">
+                <div class="col-1"></div>
+                <div class="col-9  ms-1">
+                    <div class="row">
+                        <div class="col-3">
+                            <i style="color: #F39C124C; font-size: 12px;" class="fa fa-circle"></i>
+                            <img style="margin-left: 2px;"
+                                src="../../assets/img/urn_aaid_sc_US_c676ec87-2689-4930-a4a7-40f1f6953a0a (1).png">
+                        </div>
+                        <div class="col mt-1">
+                            <p style="color: var(--unnamed-color-707070);
+                                text-align: left;
+                                font: normal normal normal 13px/25px;
+                                letter-spacing: 0px;
+                                color: #707070;
+                                opacity: 1">Factory Name</p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+     
+
+    </mat-drawer>
+    <mat-drawer-content>
+        <ul class="nav " style="height: 70px; border-bottom:  1px solid #d8d4d4; ">
+            <li class="nav-item mt-3  col-xxl-2 col-xl-1 col-lg-1" style="margin-left: 100px;">
+                <a routerLink="reports" class="nav-link or col-10" style="text-align: center;" aria-current="page"
+                    href="#">ENERGY CONSUMPTION</a>
+            </li>
+            <div class="col-1"></div>
+
+            <li class="nav-item mt-3 col-xxl-2 col-xl-1 col-lg-1">
+                <a routerLink="reports" class="nav-link or col-8" style="text-align: center;" href="#">ACTIVE POWER</a>
+            </li>
+            <div class="col-1"></div>
+            <li class="nav-item mt-3 col-xxl-2 col-xl-1 col-lg-1">
+                <a routerLink="reports" class="nav-link or col-8" style="text-align: center;" href="#">POWER FACTOR</a>
+            </li>
+            <div class="col-1"></div>
+
+            <li class="nav-item mt-3 col-xxl-2 col-xl-1 col-lg-1">
+                <a routerLink="reports" class="nav-link or  col-8" style="text-align: center;" href="#">HARMONICS</a>
+            </li>
+        </ul>
+        <div class="row">
+            <div class="col-7 mt-3 " style="margin-left:28px ;">
+                <P style="color: var(--unnamed-color-b2bec3);
+                    text-align: left;
+                    font: normal normal normal 12px/25px Montserrat;
+                    letter-spacing: 0px;
+                    color: #B2BEC3;
+                    opacity: 1;">Absolute Duration</P>
+            </div>
+            <div class="col-2 mt-3 ">
+                <P style="color: var(--unnamed-color-b2bec3);
+                    text-align: left;
+                    font: normal normal normal 12px/25px Montserrat;
+                    letter-spacing: 0px;
+                    color: #B2BEC3; margin-left: 78px;
+                    opacity: 1;">Relative Duration</P>
+            </div>
+        </div>
+
+        <div class="row  ms-3">
+
+            <div class="col-xxl-2 col-xl-12 mt-3 ">
+                <mat-form-field   class="example-form-field">
+                    <mat-label>From</mat-label>
+                    <input  matInput [matDatepicker]="datepicker">
+                    <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+                    <mat-datepicker #datepicker>
+                        <mat-datepicker-actions>
+                            <button mat-button matDatepickerCancel>Cancel</button>
+                            <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+                        </mat-datepicker-actions>
+                    </mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-xxl-2 col-xl-12 mt-3 ms-5">
+                <mat-form-field  class="example-form-field">
+                    <mat-label>To</mat-label>
+                    <input matInput [matDatepicker]="datepicker2">
+                    <mat-datepicker-toggle matSuffix [for]="datepicker2"></mat-datepicker-toggle>
+                    <mat-datepicker #datepicker2>
+                        <mat-datepicker-actions>
+                            <button mat-button matDatepickerCancel>Cancel</button>
+                            <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+                        </mat-datepicker-actions>
+                    </mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-2" style="border-right: 2px solid #eeebeb;">
+
+            </div>
+            <div class="col-1"></div>
+            <div class="col-1 ms-5 mt-4">
+                <button style="background-color: #F39C124C; border-color: transparent; 
+                    color: var(--unnamed-color-707070);
+                    text-align: center;
+                    font: normal normal normal 17px/25px;
+                    letter-spacing: 0px;
+                    color: #707070;
+                    text-transform: uppercase;
+                    opacity: 1;" mat-stroked-button>Last</button>
+            </div>
+            <div class="col mt-4">
+                <button style="width: 200px; text-align: left; border: 1px solid var(--unnamed-color-b2bec3);
+                border: 1px solid #B2BEC3;
+                border-radius: 5px; color: #707070;
+                opacity: 1;" mat-stroked-button>Day
+                    <span style="margin-left: 120px;" class="material-icons-outlined">
+                        expand_more
+                    </span>
+                </button>
+
+
+            </div>
+
+        </div>
+        <div class="col mt-3" style="border-bottom: 1px solid #d8d4d4; ">
+
+        </div>
+        <div class="row  " style="box-shadow: 0 3px 6px -2px #272D3B33;
+        ">
+            <div class="col-1 mt-4 ms-4">
+                <P style="color: var(--unnamed-color-b2bec3);
+                text-align: left;
+                font: normal normal normal 12px/25px Montserrat;
+                letter-spacing: 0px;
+                color: #B2BEC3;
+                opacity: 1;">Chart Type</P>
+
+            </div>
+            <div class="col-1 mt-3 mb-2">
+                <button style="background: var(--primary) 0% 0% no-repeat padding-box;
+                background: #F39C12 0% 0% no-repeat padding-box;
+                border-radius: 5px; border-color:transparent ; 
+                opacity: 1;" mat-stroked-button>
+                    <i style="color: #FFF8F3; font-size: 18px;" class="fa fa-line-chart"></i>
+                </button>
+            </div>
+            <div class="col-1 mt-3">
+                <button style="background: var(--primary) 0% 0% no-repeat padding-box;
+                
+                border-radius: 5px; border-color:transparent ; 
+                opacity: 1;" mat-stroked-button>
+                    <i style="color: #707070; font-size: 18px;" class="fa fa-pie-chart"></i>
+                </button>
+            </div>
+            <div class="col-1 mt-3">
+                <button style="background: var(--primary) 0% 0% no-repeat padding-box;
+                
+                border-radius: 5px; border-color:transparent ; 
+                opacity: 1;" mat-stroked-button>
+                    <i style="color: #707070; font-size: 18px;" class="fa fa-area-chart"></i>
+                </button>
+            </div>
+            <div class="col-1 mt-3">
+                <button style="background: var(--primary) 0% 0% no-repeat padding-box;
+                
+                border-radius: 5px; border-color:transparent ; 
+                opacity: 1;" mat-stroked-button>
+                    <i style="color: #707070; font-size: 18px; " class="fa fa-bar-chart"></i>
+                </button>
+            </div>
+            <div class="col-1" style="border-right: 2px solid #eeebeb;"></div>
+            <div class="col-1 mt-3 ms-4">
+                <P style="color: var(--unnamed-color-b2bec3);
+                text-align: left;
+                font: normal normal normal 12px/25px Montserrat;
+                letter-spacing: 0px;
+                color: #B2BEC3;
+                opacity: 1;">Resolution</P>
+
+            </div>
+            <div class="col-4  ms-5">
+                <div class="row  " style="background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+                    background: #FFFFFF 0% 0% no-repeat padding-box;
+                    box-shadow: 1px 2px 6px #0000001C;
+                    border-radius: 8px; margin-top: 13px;
+                    opacity: 1;">
+                    <div class="col-2 ">
+                        <button style=" color: #4C788D; border-radius: 8px; 
+                            " mat-button>10sec</button>
+                    </div>
+                    <div class="col-2 ">
+                        <button style="background: var(--primary) 0% 0% no-repeat padding-box;
+                        background: #F39C12 0% 0% no-repeat padding-box;
+                        box-shadow: 1px 2px 6px #0000001A;
+                        opacity: 1; border-radius: 7px; color: #FFFFFF; background-color: #F39C12;"
+                            mat-button>1min</button>
+                    </div>
+                    <div class="col-2">
+                        <button style="color: #4C788D;" mat-button>10min</button>
+                    </div>
+                    <div class="col-2 ">
+                        <button style="color: #4C788D;" mat-button>30min</button>
+                    </div>
+                    <div class="col-2">
+                        <button style=" color: #4C788D; border-radius: 8px; 
+                            " mat-button>1hour</button>
+                    </div>
+                    <div class="col-2 ">
+                        <button style=" color: #4C788D; border-radius: 8px; 
+                            " mat-button>1day</button>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5 ms-3">
+            <div class="col-8">
+                <div class="card" style="border-color: transparent; background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                box-shadow: 0px 8px 12px #0000001A;
+                border-radius: 10px;
+                opacity: 1;">
+                    <div class="card-body">
+                        <div class="row" style="border-bottom:  2px solid #b9b6b6;">
+                            <div class="col-6 mt-2">
+                                <h5>Energy Consumption</h5>
+
+                            </div>
+                            <div class="col-3">
+
+                                <h5><a routerLink="reports" class="nav-link chart  col-8" style="text-align: center; " href="#"> Line
+                                        Chart</a>
+                                </h5>
+
+                            </div>
+                            <div class="col-3">
+                                <h5><a  routerLink="reports"class="nav-link chart  col-8" style="text-align: center; " href="#">Record
+                                        List</a>
+                                </h5>
+
+                            </div>
+                        </div>
+                        <div class="col" id="chart">
+                            <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart"
+                                [xaxis]="chartOptions.xaxis" [dataLabels]="chartOptions.dataLabels"
+                                [grid]="chartOptions.grid" [stroke]="chartOptions.stroke" [title]="chartOptions.title">
+                            </apx-chart>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 ms-5">
+                <div class="card" style="border-color: transparent; background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                box-shadow: 0px 8px 12px #0000001A;
+                border-radius: 10px;
+                opacity: 1;">
+                    <div class="card-body">
+                        <h5 style="  color: var(--unnamed-color-707070);
+                      text-align: left;
+                      font: normal normal medium 14px/18px Montserrat;
+                      letter-spacing: 0.28px;
+                      color: #707070;
+                      opacity: 1;
+                      border-bottom:  2px solid #f5f1f1;" class="card-title">Card title</h5>
+                        <div *ngFor="let i of Arr(num3).fill(1)" class="row mt-2" style="border-bottom:  2px solid #f5f1f1;">
+                            <div class="col-1">
+                                <span style="color: #CDD5E1; font-size: 40px;" class="material-icons-outlined">
+                                    assignment
+                                </span>
+                            </div>
+                            <div class="col ms-3 mt-1">
+                                <P style="color: var(--unnamed-color-707070);
+                              text-align: left;
+                              font: normal normal normal 16px/19px ;
+                              letter-spacing: 0.32px;
+                              color: #707070;   padding : 0;
+                              margin : 0;
+                              opacity: 1;">Report Name</P>
+                                <P style="color: var(--unnamed-color-b2bec3);
+                              text-align: left;
+                              font: normal normal 600 11px/14px Montserrat;
+                              letter-spacing: 0.22px;
+                              color: #B2BEC3;
+                              opacity: 1; ">
+                                    Load Name, Load Name
+                                </P>
+                            </div>
+
+
+                        </div>
+                        <div style="height: 19px;"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="row  " style="background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 6px #272D3B33; margin-top: 58px;
+        opacity: 1;">
+            <div class="col-1 mt-4 ms-5">
+                <P style="color: var(--unnamed-color-b2bec3);
+                text-align: left;
+                font: normal normal 600 16px/19px ;
+                letter-spacing: 0.32px;
+                color: #B2BEC3; margin: 0; padding: 0;
+                opacity: 1;">Name</P>
+
+            </div>
+            <div class="col-2 mt-1">
+                <td><mat-form-field  class="example-full-width" >
+                    <mat-label style="
+                    border-radius: 4px;
+                    opacity: 1; ">Report Name...</mat-label>
+                    <input matInput placeholder="">
+                  </mat-form-field></td>
+
+            </div>
+            <div class="col-4 mt-3">
+                <button data-bs-toggle="modal" data-bs-target="#exampleModal" style="background: var(--primary) 0% 0% no-repeat padding-box;
+                background: #F39C12 0% 0% no-repeat padding-box;
+                box-shadow: 0px 3px 6px #00000029;
+                border-radius: 8px; border-color: transparent; color: #FFFFFF;
+                opacity: 1;" mat-stroked-button>
+                <span style="font-size: 20px;" class="material-icons-outlined">
+                    save
+                    </span> 
+                Save</button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          ...
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-1 mt-2" style="border-right: 2px solid #eeebeb; height: 45px;"></div>
+            <div class="col-1 mt-4 ms-4">
+                <P style="color: var(--unnamed-color-b2bec3);
+                text-align: left;
+                font: normal normal 600 16px/19px ;
+                letter-spacing: 0.32px;
+                color: #B2BEC3;
+                opacity: 1;">Export</P>
+            </div>
+            <div class="col-2 mt-3">
+                <div class="row">
+                    <div class="col-4">
+                        <button mat-stroked-button class="bb">CSV</button>
+    
+                    </div>
+                    <div class="col-4">
+                        <button mat-stroked-button class="bb">XLS</button>
+    
+                    </div>
+                    <div class="col-4">
+                        <button mat-stroked-button class="bb">PDF</button>
+    
+                    </div>
+                </div>
+                
+
+            </div>
+
+
+        </div>
+
+
+
+    </mat-drawer-content>
+</mat-drawer-container>
